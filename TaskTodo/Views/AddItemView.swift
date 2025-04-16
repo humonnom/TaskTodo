@@ -22,6 +22,7 @@ struct AddItemView: View {
             Form {
                 Section(header: Text("제목")) {
                     TextField("할 일 제목을 입력하세요", text: $title)
+                        .padding(.vertical, 8)
                 }
                 
                 let availableTypes = viewModel.getAvailableTypes(for: parent)
@@ -33,6 +34,7 @@ struct AddItemView: View {
                             }
                         }
                         .pickerStyle(SegmentedPickerStyle())
+                        .padding(.vertical, 8)
                     }
                 }
             }
